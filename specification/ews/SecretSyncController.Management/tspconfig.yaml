@@ -14,7 +14,7 @@ options:
     arm-resource-flattening: true
   "@azure-typespec/http-client-csharp-mgmt":
     namespace: "Azure.ResourceManager.SecretsStoreExtension"
-    emitter-output-dir: "{output-dir}/{service-dir}/{namespace}"
+    emitter-output-dir: "{output-dir}/sdk/secretsstoreextension/{namespace}"
   "@azure-tools/typespec-python":
     emitter-output-dir: "{output-dir}/{service-dir}/azure-mgmt-secretsstoreextension"
     service-dir: "sdk/secretsstoreextension"
