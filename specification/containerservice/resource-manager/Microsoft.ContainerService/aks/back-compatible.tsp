@@ -6,16 +6,6 @@ using Microsoft.ContainerService;
 #suppress "@azure-tools/typespec-azure-core/no-legacy-usage" "Property flatten for SDK backward compatibility."
 @@Legacy.flattenProperty(OperationValue.display);
 
-@@clientName(ManagedClusterProperties.privateFQDN, "privateFqdn");
-@@clientName(ManagedClusterProperties.azurePortalFQDN, "azurePortalFqdn");
-@@clientName(ManagedClusterProperties.enableRBAC, "enableRbac");
-
-@@clientName(ManagedClusterAgentPoolProfileProperties.enableFIPS, "enableFips");
-
-@@clientName(AgentPoolSecurityProfile.enableVTPM, "enableVtpm");
-
-@@clientName(ManagedClusterAADProfile.enableAzureRBAC, "enableAzureRbac");
-
 @@clientName(ManagedClusterPropertiesAutoScalerProfile.`balance-similar-node-groups`,
   "balanceSimilarNodeGroups"
 );
@@ -74,22 +64,14 @@ using Microsoft.ContainerService;
   "skipNodesWithSystemPods"
 );
 
-@@clientName(ManagedClusterAPIServerAccessProfile.enablePrivateClusterPublicFQDN,
-  "enablePrivateClusterPublicFqdn"
-);
-
 #suppress "@azure-tools/typespec-azure-core/no-legacy-usage" "Property flatten for SDK backward compatibility."
 @@Legacy.flattenProperty(ManagedClusterAccessProfile.properties);
-
-@@clientName(MachineOSProfile.enableFIPS, "enableFips");
 
 #suppress "@azure-tools/typespec-azure-core/no-legacy-usage" "Property flatten for SDK backward compatibility."
 @@Legacy.flattenProperty(AgentPoolAvailableVersions.properties);
 
 #suppress "@azure-tools/typespec-azure-core/no-legacy-usage" "Property flatten for SDK backward compatibility."
 @@Legacy.flattenProperty(RunCommandResult.properties);
-
-@@clientName(SnapshotProperties.enableFIPS, "enableFips");
 
 @@clientName(ManagedClusters.createOrUpdate::parameters.resource, "parameters");
 @@clientName(ManagedClusters.updateTags::parameters.properties, "parameters");

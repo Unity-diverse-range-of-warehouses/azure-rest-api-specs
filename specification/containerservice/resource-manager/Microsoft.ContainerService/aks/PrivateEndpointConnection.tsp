@@ -50,11 +50,31 @@ interface PrivateEndpointConnections {
   /**
    * To learn more about private clusters, see: https://docs.microsoft.com/azure/aks/private-clusters
    */
-  list is ArmResourceListByParent<
+  list is PrivateEndpointConnectionsOps.ListSinglePage<
     PrivateEndpointConnection,
     Response = ArmResponse<PrivateEndpointConnectionListResult>
   >;
 }
+
+@armResourceOperations
+interface PrivateEndpointConnectionsOps
+  extends Azure.ResourceManager.Legacy.LegacyOperations<
+      {
+        ...ApiVersionParameter,
+        ...SubscriptionIdParameter,
+        ...ResourceGroupParameter,
+        ...Azure.ResourceManager.Legacy.Provider,
+        ...ParentKeysOf<PrivateEndpointConnection>,
+      },
+      {
+        ...ResourceNameParameter<
+          Resource = PrivateEndpointConnection,
+          KeyName = "privateEndpointConnectionName",
+          SegmentName = "privateEndpointConnections",
+          NamePattern = ""
+        >,
+      }
+    > {}
 
 @@doc(PrivateEndpointConnection.name,
   "The name of the private endpoint connection."

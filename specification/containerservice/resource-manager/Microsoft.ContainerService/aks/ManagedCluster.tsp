@@ -305,7 +305,7 @@ interface ManagedClusters {
   getCommandResult is ManagedClusterOps.ActionSync<
     ManagedCluster,
     void,
-    ArmResponse<RunCommandResult> | (AcceptedResponse & ArmLroLocationHeader),
+    ArmResponse<RunCommandResult> | (AcceptedResponse & LocationHeader),
     Parameters = {
       /**
        * Id of the command.
@@ -355,7 +355,6 @@ interface ManagedClusters {
    * To learn more about private clusters, see: https://docs.microsoft.com/azure/aks/private-clusters
    */
   #suppress "@azure-tools/typespec-azure-core/no-openapi" "non-standard operations"
-  @list
   @get
   @action("privateLinkResources")
   privateLinkResourcesList is ArmResourceActionSync<

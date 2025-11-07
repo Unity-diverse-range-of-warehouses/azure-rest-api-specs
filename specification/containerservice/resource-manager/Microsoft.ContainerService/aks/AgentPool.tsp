@@ -161,9 +161,15 @@ interface AgentPoolsOps
         ...ApiVersionParameter,
         ...SubscriptionIdParameter,
         ...ResourceGroupParameter,
+        ...ParentKeysOf<AgentPool>,
       },
       {
-        ...KeysOf<AgentPool>,
+        ...ResourceNameParameter<
+          Resource = AgentPool,
+          KeyName = "agentPoolName",
+          SegmentName = "agentPools",
+          NamePattern = "^[a-z][a-z0-9]{0,11}$"
+        >,
       },
       ErrorResponse,
       #{ useStaticRoute: true }

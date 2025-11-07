@@ -2286,7 +2286,7 @@
           "202": {
             "description": "Azure operation completed successfully.",
             "headers": {
-              "Location": {
+              "location": {
                 "type": "string",
                 "description": "The Location header contains the URL where the status of the long running operation can be checked."
               }
@@ -6793,8 +6793,7 @@
       "properties": {
         "enableVTPM": {
           "type": "boolean",
-          "description": "vTPM is a Trusted Launch feature for configuring a dedicated secure vault for keys and measurements held locally on the node. For more details, see aka.ms/aks/trustedlaunch. If not specified, the default is false.",
-          "x-ms-client-name": "enableVtpm"
+          "description": "vTPM is a Trusted Launch feature for configuring a dedicated secure vault for keys and measurements held locally on the node. For more details, see aka.ms/aks/trustedlaunch. If not specified, the default is false."
         },
         "enableSecureBoot": {
           "type": "boolean",
@@ -9380,8 +9379,7 @@
         },
         "enableFIPS": {
           "type": "boolean",
-          "description": "Whether to use a FIPS-enabled OS.",
-          "x-ms-client-name": "enableFips"
+          "description": "Whether to use a FIPS-enabled OS."
         },
         "linuxProfile": {
           "$ref": "#/definitions/MachineOSProfileLinuxProfile",
@@ -9694,8 +9692,7 @@
         },
         "enableAzureRBAC": {
           "type": "boolean",
-          "description": "Whether to enable Azure RBAC for Kubernetes authorization.",
-          "x-ms-client-name": "enableAzureRbac"
+          "description": "Whether to enable Azure RBAC for Kubernetes authorization."
         },
         "adminGroupObjectIDs": {
           "type": "array",
@@ -9753,8 +9750,7 @@
         },
         "enablePrivateClusterPublicFQDN": {
           "type": "boolean",
-          "description": "Whether to create additional public FQDN for private cluster or not.",
-          "x-ms-client-name": "enablePrivateClusterPublicFqdn"
+          "description": "Whether to create additional public FQDN for private cluster or not."
         },
         "disableRunCommand": {
           "type": "boolean",
@@ -10148,8 +10144,7 @@
         },
         "enableFIPS": {
           "type": "boolean",
-          "description": "Whether to use a FIPS-enabled OS. See [Add a FIPS-enabled node pool](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#add-a-fips-enabled-node-pool-preview) for more details.",
-          "x-ms-client-name": "enableFips"
+          "description": "Whether to use a FIPS-enabled OS. See [Add a FIPS-enabled node pool](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#add-a-fips-enabled-node-pool-preview) for more details."
         },
         "gpuInstanceProfile": {
           "$ref": "#/definitions/GPUInstanceProfile",
@@ -11209,14 +11204,12 @@
         "privateFQDN": {
           "type": "string",
           "description": "The FQDN of private cluster.",
-          "readOnly": true,
-          "x-ms-client-name": "privateFqdn"
+          "readOnly": true
         },
         "azurePortalFQDN": {
           "type": "string",
           "description": "The special FQDN used by the Azure Portal to access the Managed Cluster. This FQDN is for use only by the Azure Portal and should not be used by other clients. The Azure Portal requires certain Cross-Origin Resource Sharing (CORS) headers to be sent in some responses, which Kubernetes APIServer doesn't handle by default. This special FQDN supports CORS, allowing the Azure Portal to function properly.",
-          "readOnly": true,
-          "x-ms-client-name": "azurePortalFqdn"
+          "readOnly": true
         },
         "agentPoolProfiles": {
           "type": "array",
@@ -11263,8 +11256,7 @@
         },
         "enableRBAC": {
           "type": "boolean",
-          "description": "Whether to enable Kubernetes Role-Based Access Control.",
-          "x-ms-client-name": "enableRbac"
+          "description": "Whether to enable Kubernetes Role-Based Access Control."
         },
         "supportPlan": {
           "$ref": "#/definitions/KubernetesSupportPlan",
@@ -14058,8 +14050,7 @@
         "enableFIPS": {
           "type": "boolean",
           "description": "Whether to use a FIPS-enabled OS.",
-          "readOnly": true,
-          "x-ms-client-name": "enableFips"
+          "readOnly": true
         }
       }
     },
